@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Untung & Dwi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="mobile-container">
+
+        <!-- COVER PAGE -->
+        <section id="cover" class="cover-page">
+            <div class="decoration top-c">
+                <img src="images/bunga1.png" alt="Decoration">
+            </div>
+
+            <div class="cover-content">
+                <p class="title-font" data-aos="fade-down">The Wedding of</p>
+                <h1 class="couple-name" data-aos="zoom-in">Untung & Dwi</h1>
+
+                <div class="guest-info" data-aos="fade-up">
+                    <p>Kepada Yth.</p>
+                    <p>Bapak/Ibu/Saudara/i</p>
+                    <div class="guest-name">Tamu Undangan</div>
+                </div>
+
+                <div class="open-invitation" data-aos="fade-up" data-aos-delay="200">
+                    <div class="envelope-wrapper">
+                        <img src="images/amplop.png" alt="Amplop" class="envelope-img">
+                    </div>
+                    <button id="btn-open" class="btn-open">
+                        <i class="fas fa-envelope-open-text"></i> Buka Undangan
+                    </button>
+                </div>
+            </div>
+
+            <div class="decoration bottom-c">
+                <img src="images/bunga2.png" alt="Decoration">
+            </div>
+        </section>
+
+        <!-- MAIN UNDANGAN -->
+        <section id="main-content" class="main-content hidden">
+
+            <!-- Music Control -->
+            <div id="music-control" class="music-control">
+                <i class="fas fa-compact-disc fa-spin"></i>
+            </div>
+
+            <!-- Greeting Section -->
+            <div class="section greeting" data-aos="fade-up">
+                <img src="images/bunga1.png" class="deco-top" alt="">
+                <p class="arabic">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+                <p class="intro-text">
+                    Dengan memohon Rahmat dan Ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara
+                    resepsi pernikahan kami:
+                </p>
+            </div>
+
+            <!-- Couple Section -->
+            <div class="section couple" data-aos="fade-up">
+                <h2 class="title-font" style="margin-bottom: 20px;">The Wedding of</h2>
+
+                <div class="groom">
+                    <h2 class="font-vibes">Untung Haji Gustawan</h2>
+                    <p class="parent-name">Putra dari Bapak Ardan (Almarhum) <br>& Ibu Layuda</p>
+                </div>
+
+                <div class="divider font-vibes" style="margin: 15px 0;">&</div>
+
+                <div class="bride">
+                    <h2 class="font-vibes">Dwi Septiani</h2>
+                    <p class="parent-name">Putri dari Bapak Ahmad Juniarto <br>& Ibu Handayani</p>
+                </div>
+            </div>
+
+            <div class="section photo-display" data-aos="zoom-in">
+                <div class="photo-wrapper">
+                    <img src="images/foto.png" alt="Couple" class="couple-main-img">
+                    <div class="photo-overlay-text">
+                        <span class="font-vibes overlay-name">Untung</span>
+                        <span class="font-vibes overlay-amp">&</span>
+                        <span class="font-vibes overlay-name">Dwi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Details -->
+            <div class="section event-details" data-aos="fade-up">
+                <img src="images/bunga2.png" class="deco-top" alt="">
+                <h2 class="title-font">Rangkaian Acara</h2>
+
+                <div class="event-box">
+                    <h3 class="font-vibes">Akad & Resepsi</h3>
+                    <p class="event-date">
+                        <i class="far fa-calendar-alt"></i> Jumat & Sabtu, 27 - 28 Maret 2026
+                    </p>
+                    <p class="event-time">
+                        <i class="far fa-clock"></i> Pukul 08.00 WIB - Selesai
+                    </p>
+                    <p class="event-location">
+                        <i class="fas fa-map-marker-alt"></i> Desa Padang Gelai
+                    </p>
+                    <a href="https://goo.gl/maps/placeholder" target="_blank" class="btn-map">
+                        <i class="fas fa-location-arrow"></i> Lihat Lokasi
+                    </a>
+                </div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="section countdown-section" data-aos="zoom-in">
+                <div id="countdown" class="countdown-container">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Hari</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Jam</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Menit</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Detik</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verse Section -->
+            <div class="section verse" data-aos="fade-up">
+                <div class="verse-box">
+                    <img src="images/bunga2.png" class="verse-deco" alt="">
+                    <p class="verse-text">
+                        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+                        jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+                        antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+                        (kebesaran Allah) bagi kaum yang berpikir."
+                    </p>
+                    <p class="verse-source">(QS. Ar-Rum: 21)</p>
+                    <img src="images/bunga1.png" class="verse-deco bottom" alt="">
+                </div>
+            </div>
+
+            <!-- Wedding Gift -->
+            <div class="section wedding-gift" data-aos="fade-up">
+                <h2 class="title-font">Wedding Gift</h2>
+                <p class="gift-text">
+                    Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan
+                    tanda kasih Anda, Anda dapat memberi kado secara cashless.
+                </p>
+
+                <div class="gift-card">
+                    <div class="card-header">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA"
+                            class="bank-logo">
+                    </div>
+                    <div class="card-body">
+                        <p class="account-number" id="dana-number">082184575125</p>
+                        <p class="account-name">A.N. Untung / Dwi</p> <!-- Placeholder name -->
+                    </div>
+                    <button class="btn-copy" onclick="copyText('dana-number')">
+                        <i class="far fa-copy"></i> Salin Nomor
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Terima kasih atas doa dan restu Bapak/Ibu/Saudara/i.</p>
+                <p class="font-vibes">Wassalamualaikum Warahmatullahi Wabarakatuh</p>
+            </footer>
+
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

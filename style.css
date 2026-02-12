@@ -1,0 +1,475 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    /* Soft background */
+    color: #1a2a6c;
+    /* Navy Blue Text */
+    overflow-x: hidden;
+}
+
+/* Mobile Container */
+.mobile-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-image: url('images/backgorund.png');
+    /* Note: typo in filename from list_dir */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Typography */
+.font-vibes {
+    font-family: 'Great Vibes', cursive;
+}
+
+.title-font {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1a2a6c;
+}
+
+h1.couple-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 10px 0;
+    color: #1a2a6c;
+}
+
+/* Cover Page */
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url('images/backgorund.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+#cover.open {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Center CSS inside the mobile container specifically for the fixed cover to align properly */
+/* Since position fixed relates to viewport, we need to ensure it looks good on desktop too if max-width is applied */
+@media (min-width: 481px) {
+    #cover {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 480px;
+    }
+
+    #cover.open {
+        transform: translate(-50%, -100%);
+    }
+}
+
+.cover-content {
+    z-index: 2;
+    padding: 20px;
+}
+
+.decoration {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+.decoration img {
+    width: 100%;
+    height: auto;
+}
+
+.top-c {
+    top: 0;
+    left: 0;
+}
+
+.bottom-c {
+    bottom: 0;
+    left: 0;
+}
+
+.guest-info {
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.guest-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.open-invitation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.envelope-wrapper {
+    margin-bottom: 20px;
+}
+
+.envelope-img {
+    width: 150px;
+    /* Adjust size based on image */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.btn-open {
+    background: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(26, 42, 108, 0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-open:hover {
+    background: #2a3a7c;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+    opacity: 0;
+    transition: opacity 1s;
+    padding-bottom: 50px;
+}
+
+.main-content.visible {
+    opacity: 1;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.deco-top {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.arabic {
+    font-family: 'Amiri', serif;
+    /* Need to load if needed, or fallback */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.couple h2 {
+    font-size: 2.5rem;
+    color: #1a2a6c;
+    margin: 10px 0;
+}
+
+.parent-name {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.divider {
+    font-size: 3rem;
+    color: #d4af37;
+    /* Gold */
+    margin: 10px 0;
+}
+
+.couple-photo img,
+.couple-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+
+.section.photo-display {
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Photo Overlay */
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.photo-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.overlay-name {
+    font-size: 3.5rem;
+    /* Large size */
+    line-height: 1;
+}
+
+.overlay-amp {
+    font-size: 2.5rem;
+    margin: 5px 0;
+    font-family: 'Great Vibes', cursive;
+    /* Ensure font is applied */
+}
+
+/* Verse Section */
+.verse-box {
+    background: rgba(26, 42, 108, 0.8);
+    /* Navy transparent */
+    color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.verse-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.verse-deco {
+    width: 100px;
+}
+
+.verse-deco.bottom {
+    transform: rotate(180deg);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    border: 2px solid #1a2a6c;
+    color: #1a2a6c;
+    /* Adjust for mobile container max-width on desktop */
+}
+
+@media (min-width: 481px) {
+    .music-control {
+        right: calc(50% - 240px + 30px);
+        /* Center relative + offset */
+    }
+}
+
+/* Event Details */
+.event-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.event-box h3 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.event-date,
+.event-time,
+.event-location {
+    font-size: 0.95rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-map {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1a2a6c;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-map:hover {
+    background: #2a3a7c;
+}
+
+/* Countdown */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.time-box {
+    background: #1a2a6c;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(26, 42, 108, 0.3);
+}
+
+.time-box span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.time-box small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+/* Wedding Gift */
+.gift-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.gift-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+}
+
+.card-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.bank-logo {
+    height: 30px;
+    width: auto;
+}
+
+.account-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.account-name {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-copy {
+    background: #f0f4f8;
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.btn-copy:hover {
+    background: #e0e4e8;
+    border-color: #bbb;
+}
