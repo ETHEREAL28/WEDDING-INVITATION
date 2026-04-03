@@ -359,14 +359,23 @@ h1.couple-name {
 }
 
 .event-date,
-.event-time,
-.event-location {
+.event-time {
     font-size: 0.95rem;
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.event-location {
+    font-size: 0.65rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    line-height: 1.4;
 }
 
 .btn-map {
