@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Countdown Timer
-    const countdownDate = new Date("March 27, 2026 08:00:00").getTime();
+    const countdownDate = new Date("April 24, 2026 08:00:00").getTime();
 
     const updateCountdown = setInterval(() => {
         const now = new Date().getTime();
